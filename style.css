@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(to right,#917173,#ad69e9,#432c52);
+    height: 100vh;
+}
+
+h1{
+    font-size: 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    color: rgb(27, 2, 51);
+}
+
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader::before{
+    content: "";
+    background: rgba(239, 222, 222, 0.05);
+    backdrop-filter: blur(8px);
+    position: absolute;
+    width: 140px;
+    height: 55px;
+    z-index: 20;
+    border-radius: 0 0 10px 10px;
+    border: 1px solid rgba(255, 255, 255,0.274 );
+    border-top: none;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.4);
+    animation:anim2 2s infinite;
+}
+
+.loader div{
+    background: rgb(228, 228, 228);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    margin: 0.2em; 
+}
+
+.first{
+    animation:an 2s infinite linear;
+    animation-delay: -0.3s;
+    transform: translateY(5px);
+}
+
+.second{
+    animation:ann 2s infinite linear;
+    animation-delay: -0.5s;
+    transform: translateY(5px);
+}
+
+.third{
+    animation:ani 2s infinite linear;
+    animation-delay: -0.7s;
+    transform: translateY(5px);
+}
+
+.forth{
+    animation:anim 2s infinite linear;
+    animation-delay: -0.9s;
+    transform: translateY(5px);
+}
+
+@keyframes an {
+    0%,
+    100%{
+        transform: translateY(5px);
+    }
+    50%{
+        transform: translateY(-65px);
+    }
+}
+
+
+@keyframes ann {
+    0%,
+    100%{
+        transform: translateY(5px);
+    }
+    50%{
+        transform: translateY(-65px);
+    }
+}
+
+@keyframes ani {
+    0%,
+    100%{
+        transform: translateY(5px);
+    }
+    50%{
+        transform: translateY(-65px);
+    }
+}
+
+@keyframes anim {
+    0%,
+    100%{
+        transform: translateY(5px);
+    }
+    50%{
+        transform: translateY(-65px);
+    }
+}
+
+@keyframes anim2 {
+    0%,
+    100%{
+        transform: rotate(-10deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+}
